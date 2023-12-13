@@ -1,4 +1,4 @@
-package bit_manipulation
+package a4_bit_manipulation
 
 func singleNumber(nums []int) int {
 	if len(nums) == 1 {

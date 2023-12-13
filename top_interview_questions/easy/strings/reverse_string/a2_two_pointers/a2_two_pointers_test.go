@@ -1,4 +1,4 @@
-package reverse_string
+package a2_two_pointers
 
 import (
 	"testing"

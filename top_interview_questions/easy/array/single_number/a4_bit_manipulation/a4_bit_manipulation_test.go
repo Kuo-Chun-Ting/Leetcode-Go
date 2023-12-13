@@ -1,4 +1,4 @@
-package bit_manipulation
+package a4_bit_manipulation
 
 import (
 	"testing"

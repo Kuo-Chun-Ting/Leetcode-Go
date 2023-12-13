@@ -1,4 +1,4 @@
-package brute_force
+package a1_brute_force
 
 func rotate(nums []int, k int) {
 	for i := 0; i > k; i++ {

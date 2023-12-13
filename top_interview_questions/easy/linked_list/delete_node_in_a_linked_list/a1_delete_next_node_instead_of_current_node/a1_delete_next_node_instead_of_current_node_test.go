@@ -1,4 +1,4 @@
-package reverse_string
+package a1_delete_next_node_instead_of_current_node
 
 import (
 	"testing"

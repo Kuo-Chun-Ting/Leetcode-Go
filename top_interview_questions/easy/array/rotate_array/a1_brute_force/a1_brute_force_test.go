@@ -1,4 +1,4 @@
-package brute_force
+package a1_brute_force
 
 import (
 	"testing"
