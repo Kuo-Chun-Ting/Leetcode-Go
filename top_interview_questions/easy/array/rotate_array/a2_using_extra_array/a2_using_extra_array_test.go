@@ -1,4 +1,4 @@
-package a1_brute_force
+package a2_using_extra_array
 
 import (
 	"testing"
