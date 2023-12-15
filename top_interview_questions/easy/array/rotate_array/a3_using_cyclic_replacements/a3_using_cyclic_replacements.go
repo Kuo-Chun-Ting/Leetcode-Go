@@ -10,7 +10,7 @@ func rotate(nums []int, k int) {
 		jumpTo := (idxAt + k) % n
 		temp = nums[jumpTo]
 		nums[jumpTo] = curr
-		if jumpTo == start {
+		if jumpTo == start && n-1 > jumpTo+1 {
 			start, idxAt = jumpTo+1, jumpTo+1
 			curr = nums[idxAt]
 		} else {
