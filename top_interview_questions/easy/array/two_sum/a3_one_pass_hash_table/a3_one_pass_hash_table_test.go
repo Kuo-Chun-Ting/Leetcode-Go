@@ -1,4 +1,4 @@
-package a1_brute_force
+package a3_one_pass_hash_table
 
 import (
 	"sort"
@@ -33,6 +33,24 @@ func TestWhenTwoNumAreTheSame(t *testing.T) {
 
 	// Assert
 	expectedResult := []int{4, 7}
+	sort.Ints(result)
+	sort.Ints(expectedResult)
+
+	assert.Equal(t, expectedResult, result)
+}
+
+func TestWhenSameIndexCanGetTheTargetThenShouldNotUseTheIndex(t *testing.T) {
+	// Arrange
+	target := 10
+	// If the logic can't handle the index well(i != j) it will return {0, 0} where 5 + 5 = 10
+	// In this case it should return {1, 6}
+	nums := []int{5, 6, 9, 8, 7, 7, 4}
+
+	// Act
+	result := twoSum(nums, target)
+
+	// Assert
+	expectedResult := []int{1, 6}
 	sort.Ints(result)
 	sort.Ints(expectedResult)
 

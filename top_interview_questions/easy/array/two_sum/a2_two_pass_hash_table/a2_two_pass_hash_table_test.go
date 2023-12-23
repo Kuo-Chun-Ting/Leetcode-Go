@@ -1,6 +1,7 @@
 package a2_two_pass_hash_table
 
 import (
+	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -16,6 +17,9 @@ func TestWhenTwoNumAreDifferent(t *testing.T) {
 
 	// Assert
 	expectedResult := []int{0, 3}
+	sort.Ints(result)
+	sort.Ints(expectedResult)
+
 	assert.Equal(t, expectedResult, result)
 }
 
@@ -29,6 +33,9 @@ func TestWhenTwoNumAreTheSame(t *testing.T) {
 
 	// Assert
 	expectedResult := []int{4, 7}
+	sort.Ints(result)
+	sort.Ints(expectedResult)
+
 	assert.Equal(t, expectedResult, result)
 }
 
@@ -44,5 +51,8 @@ func TestWhenSameIndexCanGetTheTargetThenShouldNotUseTheIndex(t *testing.T) {
 
 	// Assert
 	expectedResult := []int{1, 6}
+	sort.Ints(result)
+	sort.Ints(expectedResult)
+
 	assert.Equal(t, expectedResult, result)
 }
