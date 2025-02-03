@@ -1,5 +1,6 @@
 package a1_two_indexes_approach
 
+// Check twice
 func removeDuplicates(nums []int) int {
 	insertedIdx := 1
 
