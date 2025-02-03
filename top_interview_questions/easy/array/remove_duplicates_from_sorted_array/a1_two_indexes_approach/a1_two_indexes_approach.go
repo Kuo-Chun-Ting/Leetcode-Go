@@ -1,25 +1,14 @@
 package a1_two_indexes_approach
 
-import "fmt"
-
 func removeDuplicates(nums []int) int {
-	if len(nums) == 0 {
-		return 0
-	}
+	insertedIdx := 1
 
-	uniqueNumIndex := 0
-	for j := uniqueNumIndex + 1; j < len(nums); j++ {
-		if nums[uniqueNumIndex] != nums[j] {
-			uniqueNumIndex++
-			nums[uniqueNumIndex] = nums[j]
+	for i := insertedIdx; i < len(nums); i++ {
+		if nums[i-1] != nums[i] {
+			nums[insertedIdx] = nums[i]
+			insertedIdx++
 		}
 	}
 
-	return uniqueNumIndex + 1
-}
-
-func Run() {
-	sortedArray := []int{1, 1, 2, 2, 3}
-	result := removeDuplicates(sortedArray)
-	fmt.Println(result)
+	return insertedIdx
 }

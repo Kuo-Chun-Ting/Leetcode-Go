@@ -6,29 +6,21 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestRemoveDuplicatesWhenNumsIsNilThenReturn0(t *testing.T) {
+func TestWhen1ThenReturn1(t *testing.T) {
 	// Arrange
-	var sortedNums []int
+	sortedNums := []int{1}
 
 	// Act
 	result := removeDuplicates(sortedNums)
 
 	// Assert
-	assert.Equal(t, 0, result)
+	expectedArray := []int{1}
+	expectedLen := len(expectedArray)
+	assert.Equal(t, expectedLen, result)
+	assert.Equal(t, expectedArray, sortedNums[:expectedLen])
 }
 
-func TestRemoveDuplicatesWhenNumsEmptyThenReturn0(t *testing.T) {
-	// Arrange
-	sortedNums := []int{}
-
-	// Act
-	result := removeDuplicates(sortedNums)
-
-	// Assert
-	assert.Equal(t, 0, result)
-}
-
-func TestRemoveDuplicatesWhenNumsHasNoDuplicateThenReturnExpectedLen(t *testing.T) {
+func TestWhen123ThenReturn123(t *testing.T) {
 	// Arrange
 	sortedNums := []int{1, 2, 3}
 
@@ -42,7 +34,7 @@ func TestRemoveDuplicatesWhenNumsHasNoDuplicateThenReturnExpectedLen(t *testing.
 	assert.Equal(t, expectedArray, sortedNums[:expectedLen])
 }
 
-func TestRemoveDuplicatesWhenNumsHasDuplicateThenReturnExpectedLen(t *testing.T) {
+func TestWhen1223ThenReturn123(t *testing.T) {
 	// Arrange
 	sortedNums := []int{1, 2, 2, 3}
 
@@ -56,7 +48,7 @@ func TestRemoveDuplicatesWhenNumsHasDuplicateThenReturnExpectedLen(t *testing.T)
 	assert.Equal(t, expectedArray, sortedNums[:expectedLen])
 }
 
-func TestRemoveDuplicatesWhenNumsHasDuplicateThenReturnExpectedLenTest(t *testing.T) {
+func TestWhen112ThenReturn12(t *testing.T) {
 	// Arrange
 	sortedNums := []int{1, 1, 2}
 
