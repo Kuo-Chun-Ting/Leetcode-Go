@@ -1,5 +1,6 @@
 package a2_peak_valley_approach
 
+// Check twice
 func maxProfit(prices []int) int {
 	i := 0
 	maxProfit := 0
