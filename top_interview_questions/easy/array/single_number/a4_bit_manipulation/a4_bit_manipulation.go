@@ -1,5 +1,6 @@
 package a4_bit_manipulation
 
+// Check twice
 func singleNumber(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]

@@ -1,5 +1,6 @@
 package a3_hash_table
 
+// Check twice
 func containsDuplicate(nums []int) bool {
 	hashMap := map[int]bool{}
 
