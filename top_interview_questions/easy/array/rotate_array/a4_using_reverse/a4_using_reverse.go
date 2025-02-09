@@ -1,5 +1,6 @@
 package a4_using_reverse
 
+// Check twice
 func rotate(nums []int, k int) {
 	n := len(nums)
 	k = k % n
