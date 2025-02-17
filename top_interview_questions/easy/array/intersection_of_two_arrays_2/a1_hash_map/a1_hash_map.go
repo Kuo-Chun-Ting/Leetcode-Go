@@ -1,5 +1,6 @@
 package a1_hash_map
 
+// Check twice
 func intersect(nums1 []int, nums2 []int) []int {
 	nums1Map := make(map[int]int)
 
