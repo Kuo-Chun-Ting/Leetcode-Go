@@ -1,5 +1,6 @@
 package a3_one_pass_hash_table
 
+// Check twice
 func twoSum(nums []int, target int) []int {
 	hashTable := make(map[int]int)
 
